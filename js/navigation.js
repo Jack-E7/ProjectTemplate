@@ -21,17 +21,23 @@
   });
 
   function showCarDetails() {
-      
-    // Hide the personal details section (dvPersonalDetails)
-    // Hide the quote section (dvQuoteDetails)
-    // Show the car details section (dvCarDetails)
+      if($("#txtName").val() != "") {
+		  $('#dvPersonalDetails').hide()
+		  hideErrorAlerts()
+			// Hide the quote section (dvQuoteDetails)
+			// Show the car details section (dvCarDetails)
+	  }
+	  else{
+		  $("#dvPersonalDetailsAlert").show()
+	  }
+    
 
   }
 
   function showPersonalDetails() {
       // Hide the car details section (dvCarDetails)
       // Hide the quote section (dvQuoteDetails)
-      // Show the personal details section (dvPersonalDetails)
+      $('#dvPersonalDetails').show()
   }
 
   function showQuoteDetails() {
@@ -44,7 +50,7 @@
 
     // Perform validation to test that all data has been entered
 
-    if (/* Page is Valid */)
+    if (False)
     {
 
       // Get the values from the page elements that you need to create your JSON
@@ -59,6 +65,7 @@
           // Display the quote details page
       });
   }
+}
 
 //################################# Helper Functions - look at these when validating and changing section #########################################
 
