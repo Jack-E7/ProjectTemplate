@@ -22,10 +22,10 @@
 
   function showCarDetails() {
       if($("#txtName").val() != "") {
-		  $('#dvPersonalDetails').hide()
+		  $("#dvPersonalDetails").hide()
+		  $("#dvQuoteDetails").hide()
+		  $("#dvCarDetails").show()
 		  hideErrorAlerts()
-			// Hide the quote section (dvQuoteDetails)
-			// Show the car details section (dvCarDetails)
 	  }
 	  else{
 		  $("#dvPersonalDetailsAlert").show()
@@ -35,15 +35,17 @@
   }
 
   function showPersonalDetails() {
-      // Hide the car details section (dvCarDetails)
-      // Hide the quote section (dvQuoteDetails)
-      $('#dvPersonalDetails').show()
+		$("#dvCarDetails").hide()
+		$("#dvQuoteDetails").hide()
+		$("#dvPersonalDetails").show()
+		hideErrorAlerts()
   }
 
   function showQuoteDetails() {
-      // Hide the car details section (dvCarDetails)
-      // Hide the personal details section (dvQuoteDetails)
-      // Show the quote section (dvPersonalDetails)
+		  $("#dvPersonalDetails").hide()
+		  $("#dvCarDetails").hide()
+		  $("#dvQuoteDetails").show()
+		  hideErrorAlerts()
   }
 
   function getQuote() {

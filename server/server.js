@@ -8,11 +8,11 @@
 // ==================================================================================================
 
 	var express 	= require('express');
-	var cors 		= require('cors');
+	var cors 	= require('cors');
 	var modifiers 	= require('./modifiers');
-	var api 		= express();			// Need to call to generate the API server
+	var api 	= express();			// Need to call to generate the API server
 
-	var port = 53753;
+	var port = 8080;
 
 // ==================================================================================================
 // API ROUTES
@@ -56,4 +56,4 @@
 // recieve incoming requests using the URLs and log to the server user that it has started
 // ==================================================================================================
 api.listen(port);
-console.log('The server is now running and can be accessed at http://localhost:8080/api');
+console.log('The server is now running and can be accessed at http://localhost:' + port + '/api');
